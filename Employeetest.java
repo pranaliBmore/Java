@@ -10,8 +10,8 @@ public class Employeetest {
         System.out.println(emp2.getFirstName() + " Yearly Salary = " + emp2.yearlySalary());
 
         
-        emp1.setMonthlySalary(emp1.getMonthlySalary() * 1.10);
-        emp2.setMonthlySalary(emp2.getMonthlySalary() * 1.10);
+        emp1.setMonthlySalary(emp1.getMonthlySalary() * 0.10);
+        emp2.setMonthlySalary(emp2.getMonthlySalary() * 0.10);
 
         System.out.println("\nAfter 10% Raise:");
         System.out.println(emp1.getFirstName() + " Yearly Salary = " + emp1.yearlySalary());
