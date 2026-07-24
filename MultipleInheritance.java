@@ -36,4 +36,30 @@ class Car implements LandVehicle {
         System.out.println("Number of Wheels: " + numWheels);
     }
 }
+class HoverCraft implements LandVehicle, SeaVehicle {
+
+    public void drive() {
+        System.out.println("HoverCraft is driving on land");
+    }
+
+    public void launch() {
+        System.out.println("HoverCraft is launching on water");
+    }
+
+    public void enterLand() {
+        System.out.println("HoverCraft is entering land");
+    }
+
+    public void enterSea() {
+        System.out.println("HoverCraft is entering sea");
+    }
+
+    public void displayInfo() {
+        System.out.println("HoverCraft Name: " + name);
+        System.out.println("Max Passenger: " + maxPassanger);
+        System.out.println("Max Speed: " + maxSpeed);
+        System.out.println("Number of Wheels: " + numWheels);
+        System.out.println("Displacement: " + displacement);
+    }
+}
 
