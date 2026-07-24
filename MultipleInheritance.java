@@ -80,3 +80,34 @@ class Ship implements SeaVehicle {
         System.out.println("Displacement: " + displacement);
     }
 }
+
+public class MultipleInheritance {
+
+    public static void main(String[] args) {
+
+        Car c = new Car();
+        c.displayInfo();
+        c.drive();
+        c.park();
+        System.out.println();
+
+        HoverCraft h = new HoverCraft();
+        h.displayInfo();
+        h.drive();
+        h.launch();
+        h.enterLand();
+        h.enterSea();
+        System.out.println();
+
+        Ship s = new Ship();
+        s.displayInfo();
+        s.launch();
+        s.sail();
+           
+    }
+}
+
+
+
+
+
