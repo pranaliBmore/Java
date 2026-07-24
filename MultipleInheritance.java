@@ -19,4 +19,21 @@ interface SeaVehicle extends Vehicle {
     int displacement = 500;
     void launch();
 }
+class Car implements LandVehicle {
+
+    public void drive() {
+        System.out.println("Car is driving");
+    }
+
+    public void park() {
+        System.out.println("Car is parked");
+    }
+
+    public void displayInfo() {
+        System.out.println("Car Name: " + name);
+        System.out.println("Max Passenger: " + maxPassanger);
+        System.out.println("Max Speed: " + maxSpeed);
+        System.out.println("Number of Wheels: " + numWheels);
+    }
+}
 
