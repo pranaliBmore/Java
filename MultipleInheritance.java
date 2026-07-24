@@ -63,3 +63,21 @@ class HoverCraft implements LandVehicle, SeaVehicle {
     }
 }
 
+class Ship implements SeaVehicle {
+
+    public void launch() {
+        System.out.println("Ship is launching on water");
+    }
+
+    public void sail() {
+        System.out.println("Ship is sailing");
+    }
+
+    public void displayInfo() {
+        System.out.println("Ship Name: " + name);
+        System.out.println("Max Passenger: " + maxPassanger);
+        System.out.println("Max Speed: " + maxSpeed);
+        System.out.println("Displacement: " + displacement);
+    }
+}
+
