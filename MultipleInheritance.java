@@ -10,4 +10,13 @@ interface Vehicle {
     int maxPassanger = 4;
     int maxSpeed = 120;
 }
+interface LandVehicle extends Vehicle {
+    int numWheels = 4;
+    void drive();
+}
+
+interface SeaVehicle extends Vehicle {
+    int displacement = 500;
+    void launch();
+}
 
