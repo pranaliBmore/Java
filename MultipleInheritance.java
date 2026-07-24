@@ -80,4 +80,3 @@ class Ship implements SeaVehicle {
         System.out.println("Displacement: " + displacement);
     }
 }
-
