@@ -86,3 +86,41 @@ class Circle extends Shape {
         super.display();
     }
 }
+
+// Subclass Square 
+class Square extends Shape {
+    Square(double side) {
+        super(side);
+    }
+    void calculateArea() {
+        area = side * side;
+    }
+
+    void calculatePerimeter() {
+        perimeter = 4 * side;
+    }
+
+    void display() {
+        System.out.println("\nSquare");
+        super.display();
+    }
+}
+
+// Subclass cube 
+class Cube extends Shape {
+    Cube(double side) {
+        super(side);
+    }
+    void calculateArea() {
+        area = 6 * side * side;
+    }
+
+    void calculatePerimeter() {
+        perimeter = 12 * side;
+    }
+
+    void display() {
+        System.out.println("\nCube");
+        super.display();
+    }
+}
