@@ -124,3 +124,35 @@ class Cube extends Shape {
         super.display();
     }
 }
+
+// Test class
+class Test {
+    public static void main(String[] args) {
+        Shape s;
+        s = new Triangle(5);
+        s.calculateArea();
+        s.calculatePerimeter();
+        s.display();
+
+        s = new Rectangle(3,6);
+        s.calculateArea();
+        s.calculatePerimeter();
+        s.display();
+
+        s = new Circle(6);
+        s.calculateArea();
+        s.calculatePerimeter();
+        s.display();
+
+        s = new Square(5);
+        s.calculateArea();
+        s.calculatePerimeter();
+        s.display();
+
+        s = new Cube(3)
+        s.calculateArea();
+        s.calculatePerimeter();
+        s.display();
+
+    }
+}
