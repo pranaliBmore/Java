@@ -43,3 +43,28 @@ class Triangle extends Shape {
         super.display();
     }
 }
+
+// Subclass Rectangle
+class Rectangle extends Shape {
+    double length, width;
+
+    Rectangle(double length, double width)
+    {
+        super(0); 
+        this.length = length;
+        this.width = width;
+    }
+    void calculateArea() {
+        area = length * width;
+    }
+
+    void calculatePerimeter() {
+        perimeter = 2 * (length + width);
+    }
+
+    void display() {
+        System.out.println("\nRectangle");
+        super.display();
+    }
+}
+
