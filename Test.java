@@ -26,3 +26,20 @@ abstract class Shape {
     }
 }
 
+// Subclass Triangle
+class Triangle extends Shape {
+    Triangle(double side) {
+        super(side);
+    }
+    void calculateArea() {
+        area = (Math.sqrt(3) / 4) * side * side; // Math.sqrt(3) is used to calculate the area of an equilateral triangle
+    }
+    void calculatePerimeter() {
+        perimeter = 3 * side;
+    }
+
+    void display() {
+        System.out.println("\nTriangle");
+        super.display();
+    }
+}
