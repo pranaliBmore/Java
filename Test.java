@@ -68,3 +68,21 @@ class Rectangle extends Shape {
     }
 }
 
+// Subclass Circle
+class Circle extends Shape {
+    Circle(double radius) {
+        super(radius);
+    }
+    void calculateArea() {
+        area = Math.PI * side * side; 
+    }
+
+    void calculatePerimeter() {
+        perimeter = 2 * Math.PI * side;
+    }
+
+    void display() {
+        System.out.println("\nCircle");
+        super.display();
+    }
+}
