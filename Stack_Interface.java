@@ -7,6 +7,14 @@ Create one test class and check for the working of all the classes. */
 
 interface Stack
 {
-    
+    int size = 5;
+
+    void push(String value);
+    void pop();
+    void display();
+    void overflow();
+    void underflow();
 }
+
+
 
