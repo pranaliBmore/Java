@@ -16,5 +16,22 @@ interface Stack
     void underflow();
 }
 
+// class IntegerStack
+
+class IntegerStack implements Stack {
+    int [] stack = new int[size];
+    int top = -1;
+
+    public void push(String value) {
+        if ( top == size -1 ){
+            overflow();
+        } else {
+            stack[++top] Integer.parseInt(value);
+        }
+    }
+
+    
+}
+
 
 
