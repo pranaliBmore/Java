@@ -25,12 +25,20 @@ class IntegerStack implements Stack {
     public void push(String value) {
         if ( top == size -1 ){
             overflow();
+            System.out.println("Stack Overflow");
         } else {
             stack[++top] Integer.parseInt(value);
         }
     }
-
-    
+    public String pop() {
+        if (top == -1) {
+            underflow();
+            System.out.println("Stack Underflow");
+            return null;
+        } else {
+            return String.valueOf(stack[top--]);
+        }
+    }
 }
 
 
