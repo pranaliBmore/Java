@@ -39,6 +39,19 @@ class IntegerStack implements Stack {
             return String.valueOf(stack[top--]);
         }
     }
+    public void display() {
+        if (top == -1) {
+            System.out.println("Integerstack is empty");
+        } else {
+            System.out.println("Integer Stack elements are:");
+            for (int i = top; i >= 0; i--) {
+                System.out.println(stack[i]+ " ");
+            }
+            System.out.println();
+        }
+    }
+
+
 }
 
 
