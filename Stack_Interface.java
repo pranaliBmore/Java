@@ -60,3 +60,51 @@ class IntegerStack implements Stack {
     }
 }
 
+// String Stack
+class StringStack implements Stack {
+    String[] stack;
+    int top = -1;
+
+    StringStack(int size) {
+        stack = new String[size];
+    }
+
+    public void push(String value) {
+        if (overflow()) {
+            System.out.println("Stack Overflow!");
+        } else {
+            stack[++top] = value;
+            System.out.println(value + " inserted successfully.");
+        }
+    }
+
+    public String pop() {
+        if (underflow()) {
+            return "Stack Underflow!";
+        }
+        return stack[top--];
+    }
+
+    public void display() {
+        if (underflow()) {
+            System.out.println("Stack is Empty!");
+            return;
+        }
+
+        System.out.print("Stack Elements: ");
+        for (int i = top; i >= 0; i--) {
+            System.out.print(stack[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public boolean overflow() {
+        return top == stack.length - 1;
+    }
+
+    public boolean underflow() {
+        return top == -1;
+    }
+}
+
+
