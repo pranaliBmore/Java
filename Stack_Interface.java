@@ -107,4 +107,50 @@ class StringStack implements Stack {
     }
 }
 
+// Double Stack
+class DoubleStack implements Stack {
+    double[] stack;
+    int top = -1;
+
+    DoubleStack(int size) {
+        stack = new double[size];
+    }
+
+    public void push(String value) {
+        if (overflow()) {
+            System.out.println("Stack Overflow!");
+        } else {
+            stack[++top] = Double.parseDouble(value);
+            System.out.println(value + " inserted successfully.");
+        }
+    }
+
+    public String pop() {
+        if (underflow()) {
+            return "Stack Underflow!";
+        }
+        return String.valueOf(stack[top--]);
+    }
+
+    public void display() {
+        if (underflow()) {
+            System.out.println("Stack is Empty!");
+            return;
+        }
+
+        System.out.print("Stack Elements: ");
+        for (int i = top; i >= 0; i--) {
+            System.out.print(stack[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public boolean overflow() {
+        return top == stack.length - 1;
+    }
+
+    public boolean underflow() {
+        return top == -1;
+    }
+}
 
