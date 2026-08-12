@@ -13,3 +13,50 @@ interface Stack {
     boolean underflow();
 }
 
+// Integer Stack
+class IntegerStack implements Stack {
+    int[] stack;
+    int top = -1;
+
+    IntegerStack(int size) {
+        stack = new int[size];
+    }
+
+    public void push(String value) {
+        if (overflow()) {
+            System.out.println("Stack Overflow!");
+        } else {
+            stack[++top] = Integer.parseInt(value);
+            System.out.println(value + " inserted successfully.");
+        }
+    }
+
+    public String pop() {
+        if (underflow()) {
+            return "Stack Underflow!";
+        }
+        return String.valueOf(stack[top--]);
+    }
+
+    public void display() {
+        if (underflow()) {
+            System.out.println("Stack is Empty!");
+            return;
+        }
+
+        System.out.print("Stack Elements: ");
+        for (int i = top; i >= 0; i--) {
+            System.out.print(stack[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public boolean overflow() {
+        return top == stack.length - 1;
+    }
+
+    public boolean underflow() {
+        return top == -1;
+    }
+}
+
