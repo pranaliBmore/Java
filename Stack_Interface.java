@@ -154,3 +154,97 @@ class DoubleStack implements Stack {
     }
 }
 
+// Main Class
+public class Stack_Interface {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Stack Size: ");
+        int size = sc.nextInt();
+
+        System.out.println("\nSelect Stack Type");
+        System.out.println("1. Integer Stack");
+        System.out.println("2. String Stack");
+        System.out.println("3. Double Stack");
+        System.out.print("Enter your choice: ");
+
+        int type = sc.nextInt();
+
+        Stack stack = null;
+
+        switch (type) {
+            case 1:
+                stack = new IntegerStack(size);
+                break;
+
+            case 2:
+                stack = new StringStack(size);
+                break;
+
+            case 3:
+                stack = new DoubleStack(size);
+                break;
+
+            default:
+                System.out.println("Invalid Choice!");
+                System.exit(0);
+        }
+
+        int choice;
+
+        do {
+            System.out.println("\n========== STACK MENU ==========");
+            System.out.println("1. Push");
+            System.out.println("2. Pop");
+            System.out.println("3. Display");
+            System.out.println("4. Check Overflow");
+            System.out.println("5. Check Underflow");
+            System.out.println("6. Exit");
+            System.out.print("Enter your choice: ");
+
+            choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1:
+                    System.out.print("Enter value: ");
+                    String value = sc.next();
+                    stack.push(value);
+                    break;
+
+                case 2:
+                    System.out.println("Popped Element: " + stack.pop());
+                    break;
+
+                case 3:
+                    stack.display();
+                    break;
+
+                case 4:
+                    if (stack.overflow())
+                        System.out.println("Stack is Full.");
+                    else
+                        System.out.println("Stack is Not Full.");
+                    break;
+
+                case 5:
+                    if (stack.underflow())
+                        System.out.println("Stack is Empty.");
+                    else
+                        System.out.println("Stack is Not Empty.");
+                    break;
+
+                case 6:
+                    System.out.println("Thank You!");
+                    break;
+
+                default:
+                    System.out.println("Invalid Choice!");
+            }
+
+        } while (choice != 6);
+
+    }
+}
