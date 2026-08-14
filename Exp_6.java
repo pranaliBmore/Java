@@ -1,7 +1,8 @@
 import math.*;
-import math.convert.*;
+import convert.*;
+import convert.DecimalToBinary;
 
-public class Main {
+public class Exp_6 {
 
     public static void main(String[] args) {
 
@@ -10,7 +11,7 @@ public class Main {
         Mean mean = new Mean();
         Average avg = new Average();
         Median median = new Median();
-        StandardDeviation sd = new StandardDeviation();
+        Standard_Deviation sd = new Standard_Deviation();
 
         System.out.println("Mean = " + mean.calculate(arr));
         System.out.println("Average = " + avg.calculate(arr));

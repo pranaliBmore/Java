@@ -1,4 +1,5 @@
 package math;
+import java.util.*;
 
 public class Median {
     public double calculate(int arr[])

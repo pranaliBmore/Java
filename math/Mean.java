@@ -3,11 +3,11 @@ package math;
 public class Mean {
     public double calculate(int arr[]) 
     {
-        double sum = 0;
+        int sum = 0;
         for (int i = 0; i < arr.length; i++) 
         {
             sum += arr[i];
         }
-        return sum / arr.length;
+        return (double) sum / arr.length;
     }
 }

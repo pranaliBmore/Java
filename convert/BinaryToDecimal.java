@@ -1,4 +1,4 @@
-package math.convert;
+package convert;
 
 public class BinaryToDecimal {
 
