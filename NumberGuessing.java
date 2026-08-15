@@ -11,9 +11,11 @@ public class NumberGuessing {
         int number = ra.nextInt(100) + 1;
         int guess;
         int attempts = 0;
+        int maxAttempts = 5;
 
         System.out.println("========== Number Guessing Game ==========");
         System.out.println("Guess a number between 1 and 100: ");
+        System.out.println("You have " + maxAttempts + " attempts.");
 
         do {
             System.out.print("Enter your guess: ");
@@ -28,9 +30,13 @@ public class NumberGuessing {
            }
            else {
             System.out.println("Congratulations!!! You guessed it!");
-            System.out.println("The number was: " + number);
-            System.out.println("Number of attempts: " + attempts);
+            //System.out.println("The number was: " + number);
+            System.out.println("Number of attempts used: " + attempts);
            }
-       }while (guess != number);
+       }while (attempts < maxAttempts );
+
+       if (guess != number) {
+        System.out.println("Sorry! You've used all your attempts. The correct number was: " + number);
+       }
     }
 }
