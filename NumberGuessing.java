@@ -14,7 +14,7 @@ public class NumberGuessing {
         int maxAttempts = 5;
 
         System.out.println("========== Number Guessing Game ==========");
-        System.out.println("Guess a number between 1 and 100: ");
+        System.out.println("Guess a number between 1 and 100 ");
         System.out.println("You have " + maxAttempts + " attempts.");
 
         do {
