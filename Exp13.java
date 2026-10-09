@@ -49,6 +49,7 @@ public class Exp13{
         Thread1 t1 = new Thread1(np);
         Thread2 t2 = new Thread2(np);
         t1.start();
+        t2.start();
         try{
             t1.join();
             t2.join();
