@@ -32,6 +32,21 @@ public class CollectionsFramework {
         System.out.println("Remove element 1: " + s.remove(1));
         System.out.println("Set after removing 1: " +s);
 
+        // Queue
+
+        System.out.println("\n*****Queue*****");
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(10);
+        q.offer(20);
+        q.offer(30);
+        System.out.println("Queue: " +q);
+        System.out.println("Size of queue: " + q.size());
+        System.out.println("Peek Element: " + q.peek());
+        System.out.println("Poll Element: " + q.poll());
+        System.out.println("Queue after polling: " +q);
+
+        
+
         
     }
 }
