@@ -7,7 +7,7 @@ public class CollectionsFramework {
 
         // List
 
-        System.out.println("*****List*****");
+        System.out.println("---------List---------");
         List<String> l = new ArrayList<>();
         l.add("A");
         l.add("B");
@@ -21,7 +21,7 @@ public class CollectionsFramework {
 
         // Set 
 
-        System.out.println("\n*****Set*****");
+        System.out.println("\n---------Set---------");
         Set<Integer> s = new HashSet<>();
         s.add(1);
         s.add(2);
@@ -34,7 +34,7 @@ public class CollectionsFramework {
 
         // Queue
 
-        System.out.println("\n*****Queue*****");
+        System.out.println("\n---------Queue---------");
         Queue<Integer> q = new LinkedList<>();
         q.offer(10);
         q.offer(20);
@@ -47,19 +47,14 @@ public class CollectionsFramework {
 
         // Map
 
-        System.oout.println("\n*****Map*****");
+        System.out.println("\n---------Map---------");
         Map<String, Integer> m = new HashMap<>();
-        m.put(1, "Pranali");
-        m.put(2, "Pratiksha");
-        m.put(3, "Tejas");
+        m.put("Pranali", 1);
+        m.put("Pratiksha", 2);
+        m.put("Tejas", 3);
         System.out.println("Map: " + m);
         System.out.println("Size of map: " + m.size());
-        System.out.println("Contains key 20: " + m.containsKey(20));
-        System.out.println("Get key 3: " + m.get(3));
-
-        
-        
-
-        
+        System.out.println("Contains key Dnyaneshwari: " + m.containsKey("Dnyaneshwari"));
+        System.out.println("Get key Tejas: " + m.get("Tejas"));   
     }
 }
