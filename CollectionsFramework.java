@@ -19,6 +19,19 @@ public class CollectionsFramework {
         System.out.println("Remove element A: " + l.remove("A"));
         System.out.println("List after removing A: " + l);
 
+        // Set 
+
+        System.out.println("\n*****Set*****");
+        Set<Integer> s = new HashSet<>();
+        s.add(1);
+        s.add(2);
+        s.add(3);
+        System.out.println("Set: " +s);
+        System.out.println("Size of set: " + s.size());
+        System.out.println("Contains 2: " + s.contains(2));
+        System.out.println("Remove element 1: " + s.remove(1));
+        System.out.println("Set after removing 1: " +s);
+
         
     }
 }
