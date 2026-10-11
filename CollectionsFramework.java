@@ -45,6 +45,19 @@ public class CollectionsFramework {
         System.out.println("Poll Element: " + q.poll());
         System.out.println("Queue after polling: " +q);
 
+        // Map
+
+        System.oout.println("\n*****Map*****");
+        Map<String, Integer> m = new HashMap<>();
+        m.put(1, "Pranali");
+        m.put(2, "Pratiksha");
+        m.put(3, "Tejas");
+        System.out.println("Map: " + m);
+        System.out.println("Size of map: " + m.size());
+        System.out.println("Contains key 20: " + m.containsKey(20));
+        System.out.println("Get key 3: " + m.get(3));
+
+        
         
 
         
